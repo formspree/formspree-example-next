@@ -19,7 +19,6 @@ export default function ContactForm() {
         className={formStyles.inputs}
       />
       <ValidationError
-        prefix="Email"
         field="email"
         errors={state.errors}
         className={formStyles.fieldErrors}
@@ -33,7 +32,6 @@ export default function ContactForm() {
         className={`${formStyles.inputs} ${formStyles.textarea}`}
       />
       <ValidationError
-        prefix="Message"
         field="message"
         errors={state.errors}
         className={formStyles.fieldErrors}

@@ -51,3 +51,7 @@
   align-self: center; 
   grid-column: 2/span 1; 
 }
+
+.fieldErrors:first-letter, .formErrors::first-letter {
+  text-transform: uppercase;
+}
