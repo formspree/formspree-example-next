@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 1rem;
+  text-align: left;
+  padding: 2rem 0;
+}
+
+.inputs {
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: none;
+  padding: 0.4rem 0.5rem;
+  margin: 0;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.button {
+  justify-self: start;
+  cursor: pointer;
+}
+
+.errors {
+  margin-top: -0.5rem;
+  font-size: small;
+  color: crimson;
+  justify-self: right;
+  grid-column: 1/span 2;
+}
