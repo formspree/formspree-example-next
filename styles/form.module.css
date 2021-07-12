@@ -4,14 +4,20 @@
   grid-gap: 1rem;
   text-align: left;
   padding: 2rem 0;
+  max-width: 25em;
+}
+
+.labels {
+  padding: 0.4rem 0.5rem;
+  margin: 0;
 }
 
 .inputs {
   font-family: inherit;
   font-size: inherit;
-  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border: none;
   border-radius: 5px;
-  background: none;
   padding: 0.4rem 0.5rem;
   margin: 0;
 }
@@ -21,8 +27,13 @@
 }
 
 .button {
+  border: 1px solid #aaa;
+  background-color: transparent;
   justify-self: start;
   cursor: pointer;
+}
+.button:hover {
+  background-color: #f8f8f8;
 }
 
 .errors {

@@ -9,17 +9,40 @@ function ContactForm() {
   }
   return (
     <form onSubmit={handleSubmit} className={formStyles.container}>
-      <label htmlFor="email">Your email:</label>
-      <input id="email" type="email" name="email" className={formStyles.inputs} />
-      <ValidationError prefix="Email" field="email" errors={state.errors} className={formStyles.errors} />
-      <label htmlFor="message">Your message:</label>
-      <textarea 
-        id="message" 
+      <label htmlFor="email" className={formStyles.labels}>
+        Your email:
+      </label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        className={formStyles.inputs}
+      />
+      <ValidationError
+        prefix="Email"
+        field="email"
+        errors={state.errors}
+        className={formStyles.errors}
+      />
+      <label htmlFor="message" className={formStyles.labels}>
+        Your message:
+      </label>
+      <textarea
+        id="message"
         name="message"
         className={`${formStyles.inputs} ${formStyles.textarea}`}
       />
-      <ValidationError prefix="Message" field="message" errors={state.errors} className={formStyles.errors} />
-      <button type="submit" disabled={state.submitting} className={`${formStyles.inputs} ${formStyles.button}`}>
+      <ValidationError
+        prefix="Message"
+        field="message"
+        errors={state.errors}
+        className={formStyles.errors}
+      />
+      <button
+        type="submit"
+        disabled={state.submitting}
+        className={`${formStyles.inputs} ${formStyles.button}`}
+      >
         Send
       </button>
     </form>
