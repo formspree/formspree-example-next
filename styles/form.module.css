@@ -36,10 +36,18 @@
   background-color: #f8f8f8;
 }
 
-.errors {
+.fieldErrors {
   margin-top: -0.5rem;
   font-size: small;
   color: crimson;
   justify-self: right;
   grid-column: 1/span 2;
+}
+
+.formErrors {
+  margin: 0;
+  font-size: small;
+  color: crimson;
+  align-self: center; 
+  grid-column: 2/span 1; 
 }

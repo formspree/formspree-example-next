@@ -1,9 +1,9 @@
 import * as React from "react";
-import { FormspreeProvider, useForm, ValidationError } from "@formspree/react";
+import { useForm, ValidationError } from "@formspree/react";
 import formStyles from "../styles/form.module.css";
 
-function ContactForm() {
-  const [state, handleSubmit] = useForm("contact");
+export default function ContactForm() {
+  const [state, handleSubmit] = useForm("YOUR_FORM_ID");
   if (state.succeeded) {
     return <p>Thanks for your submission!</p>;
   }
@@ -22,7 +22,7 @@ function ContactForm() {
         prefix="Email"
         field="email"
         errors={state.errors}
-        className={formStyles.errors}
+        className={formStyles.fieldErrors}
       />
       <label htmlFor="message" className={formStyles.labels}>
         Your message:
@@ -36,7 +36,7 @@ function ContactForm() {
         prefix="Message"
         field="message"
         errors={state.errors}
-        className={formStyles.errors}
+        className={formStyles.fieldErrors}
       />
       <button
         type="submit"
@@ -45,15 +45,10 @@ function ContactForm() {
       >
         Send
       </button>
+      <ValidationError
+        errors={state.errors}
+        className={formStyles.formErrors}
+      />
     </form>
   );
 }
-
-function Form() {
-  return (
-    <FormspreeProvider project="1615048538327089110">
-      <ContactForm />
-    </FormspreeProvider>
-  );
-}
-export default Form;
