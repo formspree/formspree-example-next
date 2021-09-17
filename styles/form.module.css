@@ -3,12 +3,12 @@
   grid-template-columns: max-content 1fr;
   grid-gap: 1rem;
   text-align: left;
-  padding: 2rem 0;
+  padding-top: 2rem;
   max-width: 25em;
 }
 
 .labels {
-  padding: 0.4rem 0.5rem;
+  padding: 0.4rem 0;
   margin: 0;
 }
 
@@ -29,6 +29,8 @@
 .button {
   border: 1px solid #aaa;
   background-color: transparent;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
   justify-self: start;
   cursor: pointer;
 }
@@ -45,8 +47,7 @@
 }
 
 .formErrors {
-  margin: 0;
-  font-size: small;
+  margin-top: 1rem;
   color: crimson;
   align-self: center; 
   grid-column: 2/span 1; 
