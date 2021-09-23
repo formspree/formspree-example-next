@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Form from "../components/contactform";
+import ContactForm from "../components/contact-form";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <div className={styles.grid}>
           <div className={styles.card}>
             <h3>Contact Us</h3>
-            <Form />
+            <ContactForm />
           </div>
         </div>
       </main>
