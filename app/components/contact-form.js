@@ -1,14 +1,17 @@
-import * as React from "react";
+
+"use client"
 import { useForm, ValidationError } from "@formspree/react";
-import formStyles from "../styles/form.module.css";
+import formStyles from "../../styles/form.module.css";
 
 export default function ContactForm() {
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM);
+  const [state, handleSubmit] = useForm("YOUR_FORM_ID");
+
   if (state.succeeded) {
     return <p>Thanks for your submission!</p>;
   }
+
   return (
-    <form onSubmit={handleSubmit} className={formStyles.container}>
+   <form onSubmit={handleSubmit} className={formStyles.container}>
       <label htmlFor="email" className={formStyles.labels}>
         Your email:
       </label>
